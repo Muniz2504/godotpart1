@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://djrm5o5w3n1mh"]
+
+[ext_resource type="Texture2D" uid="uid://co3qudh3sq5pv" path="res://assets/background.png" id="1_l3jsp"]
+[ext_resource type="PackedScene" uid="uid://bhwof5c8aw4oq" path="res://box.tscn" id="2_x0gna"]
+[ext_resource type="PackedScene" uid="uid://c37iblunrco57" path="res://ground.tscn" id="3_b004u"]
+[ext_resource type="PackedScene" uid="uid://dxl2trom7no3e" path="res://player.tscn" id="3_qci25"]
+
+[node name="world" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_l3jsp")
+
+[node name="box" parent="." instance=ExtResource("2_x0gna")]
+position = Vector2(951, 530)
+
+[node name="box2" parent="." instance=ExtResource("2_x0gna")]
+position = Vector2(548, 525)
+
+[node name="box3" parent="." instance=ExtResource("2_x0gna")]
+position = Vector2(645, 528)
+
+[node name="box4" parent="." instance=ExtResource("2_x0gna")]
+position = Vector2(642, 453)
+
+[node name="box5" parent="." instance=ExtResource("2_x0gna")]
+position = Vector2(737, 378)
+
+[node name="box6" parent="." instance=ExtResource("2_x0gna")]
+position = Vector2(834, 380)
+
+[node name="ground" parent="." instance=ExtResource("3_b004u")]
+position = Vector2(513, 635)
+
+[node name="player" parent="ground" instance=ExtResource("3_qci25")]
+position = Vector2(-458, -86)

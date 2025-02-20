@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhwof5c8aw4oq"]
+
+[ext_resource type="Texture2D" uid="uid://s0j3d7a4wbik" path="res://assets/box.png" id="1_rgiux"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p5ylr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajjnj"]
+size = Vector2(91, 80)
+
+[node name="box" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_p5ylr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rgiux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 6)
+shape = SubResource("RectangleShape2D_ajjnj")
